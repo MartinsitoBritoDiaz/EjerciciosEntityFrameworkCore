@@ -64,6 +64,41 @@ namespace EFCoreTutorials.Pruebas
             else
                 Console.WriteLine("No se encontro ningun estudiante con un grado");
         }
+
+        public void InsertarEstudiantes()
+        {
+            using (var context = new Contexto())
+            {
+                var estudiante = new Estudiante()
+                {
+                    nombre = "Bill",
+                    grado = "Segundo",
+                    profesor = "Josh"
+                };
+                context.Estudiantes.Add(estudiante);
+                context.SaveChanges();
+            }
+        }
+
+        public void ActualizarEstudiantes()
+        {
+            using (var context = new Contexto())
+            {
+                var estudiante = context.Estudiantes.First<Estudiante>();
+                estudiante.nombre = "Steve";
+                context.SaveChanges();
+            }
+        }
+
+        public void EliminarEstudiante()
+        {
+            using (var context = new Contexto())
+            {
+                var estudiante = context.Estudiantes.First<Estudiante>();
+                context.Estudiantes.Remove(estudiante); 
+                context.SaveChanges();
+            }
+        }
     }
     
 }

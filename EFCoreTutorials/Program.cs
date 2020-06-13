@@ -16,7 +16,10 @@ namespace EFCoreTutorials
 
             //ejercicio.CrearEstudiante();
             //ejercicio.ConsultarEstudiante();
-            ejercicio.ConsultarGrado();
+            //ejercicio.ConsultarGrado();
+            //ejercicio.InsertarEstudiantes();
+            //ejercicio.ActualizarEstudiantes();
+            //ejercicio.EliminarEstudiante();
 
             Console.WriteLine("\nFin");
         }
