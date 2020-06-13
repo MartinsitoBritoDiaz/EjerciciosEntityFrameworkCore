@@ -99,6 +99,49 @@ namespace EFCoreTutorials.Pruebas
                 context.SaveChanges();
             }
         }
+
+        //Insertando datos relacionales
+
+        public void InsertarDatosRelacionados()
+        {
+            bool paso = false;
+
+            var grado = new Grado()
+            {
+                nombre = "Segundo",
+                Seccion = "Primaria"
+            };
+
+            var direccionEstudiante = new DireccionEstudiante()
+            {
+                ciudad = "S.F.C.M.",
+                provincia = "Duarte",
+                pais = "R.D."
+            };
+
+            var estudiante = new Estudiante()
+            {
+                nombre = "Martinsito",
+                apellido = "Brito",
+                altura = 6,
+                peso = 250,
+                fechaNacimiento = DateTime.Now,
+                Grado = grado,
+                
+                Direccion = direccionEstudiante,
+            };
+
+            using (var context = new Contexto())
+            {
+                context.Add<Estudiante>(estudiante);
+                paso = (context.SaveChanges() > 0);
+            }
+
+            if (paso)
+                Console.WriteLine("Guardado");
+            else
+                Console.WriteLine("No fue posible guardar");
+        }
     }
     
 }

@@ -88,7 +88,6 @@ namespace EFCoreTutorials.Migrations
                         .HasColumnType("real");
 
                     b.Property<byte[]>("photo")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.HasKey("estudianteId");

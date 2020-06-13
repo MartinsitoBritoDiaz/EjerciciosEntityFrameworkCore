@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreTutorials.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200613072713_Migracion")]
+    [Migration("20200613074407_Migracion")]
     partial class Migracion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,7 +90,6 @@ namespace EFCoreTutorials.Migrations
                         .HasColumnType("real");
 
                     b.Property<byte[]>("photo")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.HasKey("estudianteId");

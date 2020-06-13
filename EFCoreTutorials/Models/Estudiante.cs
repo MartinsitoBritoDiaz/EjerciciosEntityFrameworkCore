@@ -19,7 +19,6 @@ namespace EFCoreTutorials.Models
         [Required(ErrorMessage ="Debe de introducir este campo")]
         public DateTime fechaNacimiento { get; set; }
         
-        [Required(ErrorMessage ="Debe de introducir este campo")]
         public byte[] photo { get; set; }
         
         [Required(ErrorMessage ="Debe de introducir este campo")]

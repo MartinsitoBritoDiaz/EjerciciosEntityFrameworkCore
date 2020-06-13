@@ -15,6 +15,7 @@ namespace EFCoreTutorials.DAL
         {
             optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=EscuelaDB;Trusted_Connection=True;");
         }
+
         /* Este OnModelCreating fue utilizado en un ejercicio anterior del curso.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         { 

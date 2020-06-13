@@ -43,7 +43,7 @@ namespace EFCoreTutorials.Migrations
                     nombre = table.Column<string>(nullable: false),
                     apellido = table.Column<string>(nullable: false),
                     fechaNacimiento = table.Column<DateTime>(nullable: false),
-                    photo = table.Column<byte[]>(nullable: false),
+                    photo = table.Column<byte[]>(nullable: true),
                     altura = table.Column<decimal>(nullable: false),
                     peso = table.Column<float>(nullable: false),
                     GradoId = table.Column<int>(nullable: false)
