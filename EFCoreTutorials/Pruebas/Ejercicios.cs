@@ -18,8 +18,8 @@ namespace EFCoreTutorials.Pruebas
                 var estudiante = new Estudiante()
                 {
                     nombre = "Martin",
-                    grado = "Tercero",
-                    profesor = "Marcos"
+                    //grado = "Tercero",
+                    //profesor = "Marcos"
                 };
 
                 context.Estudiantes.Add(estudiante);
@@ -44,8 +44,8 @@ namespace EFCoreTutorials.Pruebas
         public void mostrar(Estudiante estudiante)
         {
             Console.WriteLine(estudiante.nombre);
-            Console.WriteLine(estudiante.grado);
-            Console.WriteLine(estudiante.profesor);
+            //Console.WriteLine(estudiante.grado);
+            //Console.WriteLine(estudiante.profesor);
         }
 
         public string GetNombre()
@@ -57,12 +57,12 @@ namespace EFCoreTutorials.Pruebas
         {
             var context = new Contexto();
 
-            var studentWithGrade = context.Estudiantes.Where(e => e.nombre == GetNombre()).Include(e => e.profesor).FirstOrDefault();
+            /*var studentWithGrade = context.Estudiantes.Where(e => e.nombre == GetNombre()).Include(e => e.profesor).FirstOrDefault();
 
             if (studentWithGrade != null)
                 mostrar(studentWithGrade);
             else
-                Console.WriteLine("No se encontro ningun estudiante con un grado");
+                Console.WriteLine("No se encontro ningun estudiante con un grado");*/
         }
 
         public void InsertarEstudiantes()
@@ -72,8 +72,8 @@ namespace EFCoreTutorials.Pruebas
                 var estudiante = new Estudiante()
                 {
                     nombre = "Bill",
-                    grado = "Segundo",
-                    profesor = "Josh"
+                    //grado = "Segundo",
+                    //profesor = "Josh"
                 };
                 context.Estudiantes.Add(estudiante);
                 context.SaveChanges();
